@@ -46,7 +46,26 @@ start you sentence with special emoji character :mag: ``:mag:`` . During test ex
 - Click on 'States' dropbox
 - :mag: Validate that values in this dropbox are sorted alphabetically
 - Select 'AZ' and press 'OK' button
-- :mag: Validate that new order contians 'Arizon' as a 'Target State'
+- :mag: Validate that new order contains 'Arizon' as a 'Target State'
+
+---
+## Test Case with Parameters and Test Data
+
+To specify test parameter, use the ``$`` character, following by parameter name (w/o spaces). Parameter can be embedded into _Test Case_ description and steps. The parameter scope is defined by _Test Case_, i.e. it's vissible only within same _Test Case_ where it's defined.
+
+To specify list of possible values, we recommend to use tables embedded into _Test Case_, where each column represents a paramater and row is used to specify iterations and parameter values that are used in each iteration.
+
+| Title  | Edition | Count | Price |
+|---    |---      |---    |---    |
+| The Hitchhiker's Guide to the Galaxy  | Kindle | 1 | 7.70 |
+| Ender's Game | Paperback | 2 | 9.74 |
+
+- Go to [Amazon](http://www.amazon.com) bookstore
+- Search for $Title book
+- Select the book $Edition edition
+- :mag: make sure that price is equal to $Price
+- Add $Count of found book into your shopping cart
+- Proceed to 'Checkout' page to see your order
 
 ---
 ## Report Error from Test Case

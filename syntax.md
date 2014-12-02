@@ -54,6 +54,28 @@ Typing an ``@`` symbol, followed by a username, will specify a person. The conte
 
 Typing an ``$`` symbol, followed by a any word (without spaces), can be used to specify a parameter. Parameter can be substitute by some value, during _Test Case_ execution.
 
+## Test Case Parameters
+
+Parameter can be embedded into _Test Case_ description and steps. The parameter scope is defined by _Test Case_, i.e. it's vissible only within same _Test Case_ where it's defined.
+
+To specify list of possible values, we recommend to use tables embedded into _Test Case_, where each column represents a parameter and row is used to specify iterations and parameter values that are used in each iteration.
+
+**test-md** runner could select one of the following options to execute parametrized _Test Case_.
+
+The first option is to create a new _Test Case_ result for each iteration. In such case, the result name must also include an additional signature, composed from mixture of parameter names and iteration number.
+
+For example:
+``Parametrized Test Case User1-Pswd1 - Run (2014-11-04T10:15:16Z)``
+
+Where parameter values used in this iteration can be specified in quote block following description, like this:
+
+```
+> User1: admin
+> Pswd1: qwerty
+```
+
+---
+
 ## Test Case Result
 
 For any _Test Suite_ or _Test Case_ execution, **test-md** runner must report an execution result. There are two files that every **test-md** framework should produce.
@@ -64,7 +86,7 @@ The first file is a generic summary of _Test Suite_ execution in [xUnit](http://
 
 ### Detailed Test Result Convention
 
-The double hashtag ``##`` (with space before name) defines a _Test Case Result_, which should have same name as a _Test Case_ and [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp, that specifies execution time of this _Test Case_.
+The double hashtag ``##`` (with space before name) defines a _Test Case Result_, which should have same name as a _Test Case_, following by dash ``-`` character, "Run" word and [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp, that specifies execution time of this _Test Case_.
 
 Description is an optional, it can be either copy of _Test Case_ description or text, provided by user, during _Test Case_ execution.
 
@@ -88,7 +110,7 @@ If step does not start with special emoji character, it's either **Done** or **S
 ```
 ## Plain Test Case - Run (2014-11-04T10:15:16Z)
 
-This is how Test Set run will look like. Title contains an original Test Case name pluys Run and also a timestamp in ISO 8601 format. Quote under description contains duration according to above format
+This is how Test Set run will look like. Title contains an original Test Case name, following dash and 'Run' word and also a timestamp in ISO 8601 format. Quote under description contains duration according to above format
 > PT10M45S
 > @alexei
 

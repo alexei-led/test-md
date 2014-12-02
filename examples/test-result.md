@@ -1,6 +1,6 @@
 ## Plain Test Case - Run (2014-11-04T10:15:16Z)
 
-This is how Test Set run will look like. Title contains an original Test Case name pluys Run and also a timestamp in ISO 8601 format. Quote under description contains duration according to above format
+This is how Test Set run will look like. Title contains an original Test Case name plus Run and also a timestamp in ISO 8601 format. Quote under description contains duration according to above format
 > PT10M45S
 > @alexei
 
