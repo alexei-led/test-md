@@ -4,11 +4,11 @@ This is how Test Set run will look like. Title contains an original Test Case na
 > PT10M45S
 > @alexei
 
-+ This is executed step
-+ Verify that everything is OK
-  > Pass
+- This is executed step
+- Verify that everything is OK
+  > :+1: The validation passed
 - ~~Non executed step~~
-+ Doing this step, produces unexpected Error
-  > Error - everything crashed
+- Doing this step, produces unexpected Error
+  > :x: Error - everything crashed! Help!
 - Verify something that always fail
-  > Fail - indeed fails
+  > :-1: Fail - Hmm... the validation fails indeed!

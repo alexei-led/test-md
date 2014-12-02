@@ -3,7 +3,7 @@
 
 ## The Concept
 
-**test-md** is a manual testing framework, where test cases and test results are defined as a plain text files. **test-md** syntax essentially a convention, which is built around markdown [syntax](syntax.md).
+**test-md** is a manual testing framework, where test cases and test results are defined as a plain text files. **test-md** syntax essentially a [convention](syntax.md), which is built around [Markdown syntax](https://guides.github.com/features/mastering-markdown).
 
 ## As fast as you can type
 

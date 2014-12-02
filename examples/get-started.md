@@ -20,28 +20,33 @@ This test contains multiple steps. Any bullet or number list considered as steps
 - And the final step
 
 ---
-## Test Case with Step Blocks
+## Fill Login Form
 
-This test case contains Steps blocks. Step block can be reused within and across different Test Cases.
-
-### <a name="FillLoginForm"></a>Fill Login Form
-
-This is a Step block with 2 reusable steps
+This is a reusable Test Case. It's possible to "invoke" steps of this case from other Test Case. To reuse these steps, you need to include a reference to the Test Case, skipping 'whitespace' characters, like this: ``[Reuse Fill Login](#FillLoginForm)``
 
 - Enter $User and $Password into corresponding fields
 - Press **Login** button
 
 ---
+## Reuse Test Case
+
+This test case reuse step bock defined in current file (same Test Suite)
+
+- First step
+- Second step
+- Reuse step block [Fill Login](#FillLoginForm)
+
+---
 ## Test Case with Assertion
 
 This test case contains assertions. Assertion is a special step that describes validation and not action. To define an assertion
-start you setnece with **Validate** word. During test execution you will be able to specify **Passed** or **Failed** result.
+start you sentence with special emoji character :mag: ``:mag:`` . During test execution **test-md** runner will allow user to specify **Passed** or **Failed** result for validation step.
 
 - Open 'New Order' form
 - Click on 'States' dropbox
-- Validate that values in this dropbox are sorted alphabetically
+- :mag: Validate that values in this dropbox are sorted alphabetically
 - Select 'AZ' and press 'OK' button
-- Validate that new order contians 'Arizon' as a 'Target State'
+- :mag: Validate that new order contians 'Arizon' as a 'Target State'
 
 ---
 ## Report Error from Test Case
@@ -82,12 +87,3 @@ function test() {
 }
 test()
 ```
-
----
-## Reuse Step Block
-
-This test case reuse step bock defined in current file (same Test Suite)
-
-- First step
-- Second step
-- Reuse step block [Fill Login](#FillLoginForm)
