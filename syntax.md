@@ -64,7 +64,7 @@ The first file is a generic summary of _Test Suite_ execution in [xUnit](http://
 
 ### Detailed Test Result Convention
 
-The double hashtag ``##`` (with space before name) defines a _Test Case Result_, which should have same name as a _Test Case_ and (ISO 8601)[http://en.wikipedia.org/wiki/ISO_8601] timestamp, that specifies execution time of this _Test Case_.
+The double hashtag ``##`` (with space before name) defines a _Test Case Result_, which should have same name as a _Test Case_ and [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) timestamp, that specifies execution time of this _Test Case_.
 
 Description is an optional, it can be either copy of _Test Case_ description or text, provided by user, during _Test Case_ execution.
 
