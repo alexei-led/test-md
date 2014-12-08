@@ -42,6 +42,38 @@ This test contains multiple steps. Any bullet or number list considered as steps
 - And the final step
 ```
 
+## Reuse Test Case within same file or between files
+
+In order to reuse some _Test Case_ from within other _Test Case_, user need to add a reference to the _Test Case_ s/he wants to reuse. The reuse meaning is that all steps from reused _Test Case_ will be copied to target _Test Case_ during test execution.
+
+How to define a reuse?
+
+All you need to do is to create a link to desired _Test Case_. The link creation rule is quite simple: you need to surround some string (you want to appear as a link name) with square brackets, followed by hashtag prefixed _Test Case_ name, where all name character are in lower case and white spaces are replaced by dash character.
+
+**test-md** runner must replace step where "reuse" is defined with steps coming from "reused" _Test Case_.
+
+**Example**
+
+```
+## Fill Login Form
+
+This is a reusable Test Case. It's possible to "invoke" steps of this case from other Test Case. To reuse these steps, you need to include a reference to the Test Case, replacing 'whitespace' characters with 'dash' ``-``, like this: ``[Reuse Fill Login](#fill-login-form)``
+
+- Enter $User and $Password into corresponding fields
+- Press **Login** button
+
+---
+## Reuse Test Case
+
+This test case reuse step bock defined in current file (same Test Suite)
+
+- First step
+- Second step
+- Reuse steps from [Fill Login](#fill-login-form) test case
+
+```
+
+
 ## Special Tags
 
 ### Hashtag

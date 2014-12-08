@@ -24,7 +24,7 @@ This test contains multiple steps. Any bullet or number list considered as steps
 ---
 ## Fill Login Form
 
-This is a reusable Test Case. It's possible to "invoke" steps of this case from other Test Case. To reuse these steps, you need to include a reference to the Test Case, replacing 'whitespace' characters with 'dash' ``-``, like this: ``[Reuse Fill Login](#Fill-Login-Form)``
+This is a reusable Test Case. It's possible to "invoke" steps of this case from other Test Case. To reuse these steps, you need to include a reference to the Test Case, replacing 'whitespace' characters with 'dash' ``-``, like this: ``[Reuse Fill Login](#fill-login-form)``
 
 - Enter $User and $Password into corresponding fields
 - Press **Login** button
@@ -36,7 +36,7 @@ This test case reuse step bock defined in current file (same Test Suite)
 
 - First step
 - Second step
-- Reuse step block [Fill Login](#Fill-Login-Form)
+- Reuse step block [Fill Login](#fill-login-form)
 
 ---
 ## Test Case with Assertion
