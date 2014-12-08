@@ -23,7 +23,7 @@ This is the minimal test case. It does nothing at all.
 ## Test Case step defintion
 
 The dash ``-`` or other bullet character, like ``*`` and ``+``, can define a _Test Case_ step. Steps can be hierarchical: use ``tab`` character do define a next level.
-There are two types of steps: ***action*** step and ***validation*** step. ***Action*** step represents an action, user should take, where ***validation*** step is a checkpoint, where user must state if step passed or failed. To define a ***validation*** step it should start with magnifier emoji :mag:(``:mag:``) tag.
+There are two types of steps: ***action*** step and ***validation*** step. ***Action*** step represents an action, user should take, where ***validation*** step is a checkpoint, where user must state if step passed or failed. To define a ***validation*** step it should start with special emoji character :a: (``:a:`` - for assertion) or with other emoji character :mag: (``:mag:`` - magnifier glass; for inspection)
 
 To execute _Test Case_, **test-md** runner must execute all steps one by one. For ***action*** step, user will be able to mark it as **Done**, skip step or report an unexpected **Error** with option to provide additional Error details. For ***validation*** step, user can mark it as **Passed** or **Failed** with option to provide additional details about the failure.
 
@@ -36,7 +36,9 @@ This test contains multiple steps. Any bullet or number list considered as steps
 - And this is the second step
   - This is a sub-step of second step
   - Additional sub-step to be completed
-- :mag: Now it's time to validate something
+- :a: Now it's time to validate something
+- Perform additional step
+- :mag: and do validation once again
 - And the final step
 ```
 
@@ -96,7 +98,9 @@ It's also possible to report _Test Case_ performance and user, who did the actua
 
 The dash ``-`` or other bullet character, like ``*`` and ``+``, defines an executed _Test Case_ step. Step text is a copy of _Test Case_ text, but **test-md** runner can allow user to modify this text.
 
-To specify _Test Case_ step status, we recommend to use special emoji characters (Why emoji? - Language independent, parseable and nicely presented).
+To specify _Test Case_ step status, we recommend to use special emoji characters.
+
+Why to use emoji? - Language independent, readable, parseable and nicely presented.
 
 Special emoji characters meaning:
 - :+1: (``:+1:``) - validation success

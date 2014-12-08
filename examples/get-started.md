@@ -16,13 +16,15 @@ This test contains multiple steps. Any bullet or number list considered as steps
 - Ans the second step
   - This is a sub-step of second step
   - Additional sub-step to be completed
-- :mag: Now it's time to validate something
+- [?] Now it's time to validate something
+- Perform additional step
+- :mag: and do validation once again
 - And the final step
 
 ---
 ## Fill Login Form
 
-This is a reusable Test Case. It's possible to "invoke" steps of this case from other Test Case. To reuse these steps, you need to include a reference to the Test Case, skipping 'whitespace' characters, like this: ``[Reuse Fill Login](#FillLoginForm)``
+This is a reusable Test Case. It's possible to "invoke" steps of this case from other Test Case. To reuse these steps, you need to include a reference to the Test Case, replacing 'whitespace' characters with 'dash' ``-``, like this: ``[Reuse Fill Login](#Fill-Login-Form)``
 
 - Enter $User and $Password into corresponding fields
 - Press **Login** button
@@ -34,19 +36,19 @@ This test case reuse step bock defined in current file (same Test Suite)
 
 - First step
 - Second step
-- Reuse step block [Fill Login](#FillLoginForm)
+- Reuse step block [Fill Login](#Fill-Login-Form)
 
 ---
 ## Test Case with Assertion
 
 This test case contains assertions. Assertion is a special step that describes validation and not action. To define an assertion
-start you sentence with special emoji character :mag: ``:mag:`` . During test execution **test-md** runner will allow user to specify **Passed** or **Failed** result for validation step.
+start you sentence with special emoji character, either :a: (``:a:`` - assertion) or :mag: (``:mag:`` - magnify glass, for inspection). During test execution **test-md** runner will allow user to specify **Passed** or **Failed** result for validation step.
 
 - Open 'New Order' form
 - Click on 'States' dropbox
-- :mag: Validate that values in this dropbox are sorted alphabetically
+- :a: Validate that values in this dropbox are sorted alphabetically
 - Select 'AZ' and press 'OK' button
-- :mag: Validate that new order contains 'Arizon' as a 'Target State'
+- :mag: Validate that new order contains 'Arizona' as a 'Target State'
 
 ---
 ## Test Case with Parameters and Test Data
@@ -63,7 +65,7 @@ To specify list of possible values, we recommend to use tables embedded into _Te
 - Go to [Amazon](http://www.amazon.com) bookstore
 - Search for $Title book
 - Select the book $Edition edition
-- :mag: make sure that price is equal to $Price
+- [?] make sure that price is equal to $Price
 - Add $Count of found book into your shopping cart
 - Proceed to 'Checkout' page to see your order
 
