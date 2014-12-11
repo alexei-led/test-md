@@ -13,7 +13,7 @@ This is the minimal test case. It does nothing at all.
 This test contains multiple steps. Any bullet or number list considered as steps list. Steps can be defined hierarchical too.
 
 - This is the first step
-- Ans the second step
+- And the second step
   - This is a sub-step of second step
   - Additional sub-step to be completed
 - [?] Now it's time to validate something
